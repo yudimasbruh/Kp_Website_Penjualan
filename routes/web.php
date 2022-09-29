@@ -21,8 +21,11 @@ Route::get('/dashboard', function () {
 // user
 
 Route::get("/dashboard/user", [AdminController::class, 'index']);
+Route::get("/dashboard/user/detail/{id}", [AdminController::class, 'detail']);
 Route::post("/dashboard/user/create", [AdminController::class, 'new_admin']);
 Route::get('/dashboard/user/delete/{id}', [AdminController::class, 'hapus']);
+Route::put('/dashboard/user/edit/{id}', [AdminController::class, 'edit'])->name("update_admin");
+// Route::post('/dashboard/user/update/{id}', [AdminController::class, 'update']);
 // 
 
 Route::get("/dashboard/kategori", function(){
