@@ -36,7 +36,7 @@
                 <td>{{ $item->nama }}</td>
                 <td>{{ $item->kategori->nama }}</td>
                 <td>Rp.{{ $item->harga }}</td>
-                <td>-</td>
+                <td><img src="foto-produk/{{ $item->foto }}" class="img-responsive" style="max-height:100px; max-width:100px"></td>
                 <td>
                     <a href="/dashboard/produk/update/{{ $item->id }}/edit" type="button" id='update-btn'></a>
                     <button type="button" onclick="getProduk({{ $item->id }})" class="btn btn-sm btn-warning" data-bs-toggle="modal" data-bs-target="#editModal">edit</button>
@@ -66,8 +66,8 @@
         </select>
         <input type="number" name="harga" placeholder="Harga" class="form-control border mt-3 ps-3 pe-3"/>
         <div class="input-group mb-3 mt-3">
-            <input type="file" name="foto-produk" class="form-control" id="inputGroupFile02"/>
-            <label class="input-group-text" for="inputGroupFile02">Upload</label>
+            <input type="file" name="foto" class="form-control" id="input-file-now-custom-3"/>
+            <label class="input-group-text" for="input-file-now-custom-3">Upload</label>
         </div>
     </div>
     <div class="modal-footer">

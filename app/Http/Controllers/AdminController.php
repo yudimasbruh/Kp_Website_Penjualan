@@ -22,6 +22,8 @@ class AdminController extends Controller
         return redirect('/dashboard/user');
     }
 
+    // mengambil detail data admin
+
     public function detail($id){
 
         $data = ModelsAdmin::find($id);
@@ -65,20 +67,5 @@ class AdminController extends Controller
        return redirect('/dashboard/user');
         
     }
-
-    // public function update(Request $req,$id,$admin){
-
-    //     ModelsAdmin::find($id)->update($id->all());
-    //     $admin->nama = $req->nama;
-    //     $admin->email = $req->email;
-    //     $admin->telepon = $req->telepon;
-    //     $admin->password = $req->password;
-
-    //     $admin->save();
-
-    //     return redirect('/dashboard/user');
-
-    // }
-
 
 }

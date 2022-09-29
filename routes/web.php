@@ -16,6 +16,8 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
+// produk
+
 Route::get('/dashboard', [ProdukController::class, "index"]);
 Route::get("/dashboard/produk/detail/{id}", [ProdukController::class, 'detail']);
 Route::post("/dashboard/produk/new", [ProdukController::class, "create"]);
@@ -28,8 +30,8 @@ Route::get("/dashboard/user/detail/{id}", [AdminController::class, 'detail']);
 Route::post("/dashboard/user/create", [AdminController::class, 'new_admin']);
 Route::get('/dashboard/user/delete/{id}', [AdminController::class, 'hapus']);
 Route::put('/dashboard/user/edit/{id}', [AdminController::class, 'edit'])->name("update_admin");
-// Route::post('/dashboard/user/update/{id}', [AdminController::class, 'update']);
-// 
+
+// kategori
 
 Route::get("/dashboard/kategori", [KategoriController::class, "index"]);
 Route::post("/dashboard/kategori/new", [KategoriController::class, "create"]);

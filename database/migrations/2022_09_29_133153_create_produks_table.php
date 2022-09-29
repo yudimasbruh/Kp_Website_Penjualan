@@ -18,7 +18,7 @@ return new class extends Migration
             $table->foreignId("kategori_id");
             $table->string("nama");
             $table->integer("harga");
-            $table->text("foto");
+            $table->string("foto");
             $table->timestamps();
         });
     }

@@ -44,9 +44,10 @@ class ProdukController extends Controller
             $produk->harga = $req->harga;
 
             // data foto produk
-            $filename = $req->file("foto-produk")->getClientOriginalName();
-            $produk->foto = $filename;
-            $path = $req->file("foto-produk")->storeAs("/public/img", $filename, 'public');
+            if($req->hasFile('foto')){
+                $req->file('foto')->move('foto-produk/', $req->file('foto')->getClientOriginalName());
+                $produk->foto = $req->file('foto')->getClientOriginalName();
+            }
 
             // 
             $kategori->produk()->save($produk);
