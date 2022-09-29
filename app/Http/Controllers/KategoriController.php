@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\Kategori;
 use App\Http\Requests\StoreKategoriRequest;
 use App\Http\Requests\UpdateKategoriRequest;
+use Illuminate\Http\Request;
 
 class KategoriController extends Controller
 {
@@ -15,7 +16,9 @@ class KategoriController extends Controller
      */
     public function index()
     {
-        //
+        return view("kategori_dashboard", [
+            "data" => Kategori::all(),
+        ]);
     }
 
     /**
@@ -23,9 +26,27 @@ class KategoriController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function create()
+    public function create(Request $req)
     {
-        //
+        $kategori = new Kategori;
+
+        $kategori->nama = $req->nama;
+
+        $kategori->save();
+
+        return redirect("/dashboard/kategori");
+    }
+
+    /**
+     * Menghapus data kategori berdasarkan id
+     */
+
+    public function delete($id){
+        $kategori = Kategori::find($id);
+
+        $kategori->delete();
+
+        return redirect("/dashboard/kategori");
     }
 
     /**

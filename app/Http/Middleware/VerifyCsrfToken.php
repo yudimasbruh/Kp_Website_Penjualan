@@ -13,6 +13,7 @@ class VerifyCsrfToken extends Middleware
      */
     protected $except = [
         '/dashboard/user/create',
-        '/dashboard/user/edit/*'
+        '/dashboard/user/edit/*',
+        '/dashboard/kategori/new'
     ];
 }

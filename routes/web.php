@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\AdminController;
+use App\Http\Controllers\KategoriController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -28,6 +29,6 @@ Route::put('/dashboard/user/edit/{id}', [AdminController::class, 'edit'])->name(
 // Route::post('/dashboard/user/update/{id}', [AdminController::class, 'update']);
 // 
 
-Route::get("/dashboard/kategori", function(){
-    return view("kategori_dashboard");
-});
+Route::get("/dashboard/kategori", [KategoriController::class, "index"]);
+Route::post("/dashboard/kategori/new", [KategoriController::class, "create"]);
+Route::get("/dashboard/kategori/delete/{id}", [KategoriController::class, "delete"]);
