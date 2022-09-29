@@ -5,13 +5,12 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class Kategori extends Model
+class Produk extends Model
 {
     use HasFactory;
 
-    public $timestamps = false;
+    public function kategori(){
 
-    public function produk(){
-        return $this->hasMany(Produk::class);
+        return $this->belongsTo(Kategori::class);
     }
 }

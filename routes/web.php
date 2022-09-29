@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\AdminController;
 use App\Http\Controllers\KategoriController;
+use App\Http\Controllers\ProdukController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -15,10 +16,11 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/dashboard', function () {
-    return view('home_dashboard');
-});
-
+Route::get('/dashboard', [ProdukController::class, "index"]);
+Route::get("/dashboard/produk/detail/{id}", [ProdukController::class, 'detail']);
+Route::post("/dashboard/produk/new", [ProdukController::class, "create"]);
+Route::get("/dashboard/produk/delete/{id}", [ProdukController::class, "delete"]);
+Route::put("/dashboard/produk/edit/{id}" , [ProdukController::class, "edit"])->name("update_produk");
 // user
 
 Route::get("/dashboard/user", [AdminController::class, 'index']);
