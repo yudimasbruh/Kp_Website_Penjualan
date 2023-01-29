@@ -19,6 +19,7 @@ return new class extends Migration
             $table->string("nama");
             $table->integer("harga");
             $table->string("foto");
+            $table->string("keterangan");
             $table->timestamps();
         });
     }

@@ -27,4 +27,5 @@
     <!-- CSS Files -->
     <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
     <link id="pagestyle" href="{{ asset('/css/material-dashboard.css?v=3.0.4') }}" rel="stylesheet" />
+    <link rel="stylesheet" href="{{ asset("css/bootstrap.css") }}"/>
   </head>
