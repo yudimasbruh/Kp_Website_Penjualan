@@ -11,7 +11,7 @@
       <meta name="description" content="" />
       <meta name="author" content="" />
       <link rel="shortcut icon" href="images/favicon.png" type="">
-      <title>AL-KAAFI Collection - Fashion Shop</title>
+      <title>FADHIL MUSLIM - Fashion Shop</title>
       <!-- bootstrap core css -->
       <link rel="stylesheet" type="text/css" href="{{ asset("css/bootstrap.css") }}" />
       <!-- font awesome style -->
@@ -29,7 +29,7 @@
                <nav class="navbar navbar-expand-lg custom_nav-container ">
                   <a class="navbar-brand d-flex justify-content-start align-items-center" style="color: #363636;" href="index.html">
                     <img width="55" height="55" src="{{ asset("images/logo.png") }}" alt="#" />
-                    <h5>AL-KAAFI COLLECTION</h5>
+                    <h5>FADHIL MUSLIM</h5>
                 </a>
                   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                   <span class=""> </span>

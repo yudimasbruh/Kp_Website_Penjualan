@@ -70,9 +70,9 @@
  </footer>
  <!-- footer end -->
  <div class="cpy_">
-    <p class="mx-auto">© 2022 All Rights Reserved By <a href="https://html.design/">Al-Muttaqin Olshop</a><br>
+    <p class="mx-auto">© 2023 All Rights Reserved By <a href="https://html.design/">Al-Muttaqin Olshop</a><br>
     
-       Distributed By <a href="https://themewagon.com/" target="_blank">AL-KAAFI Collection</a>
+       Distributed By <a href="https://themewagon.com/" target="_blank">FADHIL MUSLIM</a>
     
     </p>
  </div>
